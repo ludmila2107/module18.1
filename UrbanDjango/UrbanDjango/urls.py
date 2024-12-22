@@ -19,6 +19,16 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
 from task2.views import function_based_view, classBasedView
+from django.contrib import admin
+from django.urls import path
+from task3 import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.main_page, name='main_page'),
+    path('shop/', views.shop_page, name='shop_page'),
+    path('cart/', views.cart_page, name='cart_page'),
+]
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
